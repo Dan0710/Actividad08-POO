@@ -95,16 +95,16 @@ public class Director {
             System.out.println(instrumento.afinarInstrumento());
         }
     }
-    public void ordenarTocarNota(){
+    public void ordenarTocarNota(String nota){
         for(int i = 0; i < orquesta.size(); i++){
             Instrumento instrumento = orquesta.get(i);
-            System.out.println(instrumento.tocarNota());
+            System.out.println(instrumento.tocarNota(nota));
         }
     }
-    public void ordenarPartitura(){
+    public void ordenarPartitura(String partitura){
         for(int i = 0; i < orquesta.size(); i++){
             Instrumento instrumento = orquesta.get(i);
-            System.out.println(instrumento.ejecutarPiezaMusical());
+            System.out.println(instrumento.ejecutarPiezaMusical(partitura));
         }
     }
     
