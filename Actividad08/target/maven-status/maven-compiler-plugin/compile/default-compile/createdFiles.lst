@@ -1,5 +1,6 @@
 modelo\Percusion.class
 modelo\Instrumento.class
+control\SoS_Exception.class
 modelo\VientoMadera.class
 control\Director.class
 vista\main.class
