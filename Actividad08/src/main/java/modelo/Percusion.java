@@ -5,6 +5,10 @@
  */
 package modelo;
 
+import control.SoS_Exception;
+import static control.SoS_Exception.TInstrumento.Instrumento_Percusion;
+import static control.SoS_Exception.TInstrumento.Instrumento_VientoMadera;
+
 /**
  *
  * @author elias
@@ -15,13 +19,17 @@ public class Percusion extends Instrumento {
         super("Percusión");
     }
 
-    @Override
-    public void notificarDesperfecto() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
 
     @Override
-    public void arreglarDesperfecto() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void arreglarDesperfecto(boolean esCorregible) throws SoS_Exception {
+        if (esCorregible) {
+            System.out.println("El instrumento " + this.getNombre() + " ha sido arreglado correctamente");
+        }
+        else {
+            throw new SoS_Exception(Instrumento_Percusion);
+        }    
     }
+    
+    
 }

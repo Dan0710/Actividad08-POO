@@ -5,6 +5,8 @@
  */
 package modelo;
 
+import control.SoS_Exception;
+
 /**
  *
  * @author Dan
@@ -58,11 +60,11 @@ public abstract class Instrumento {
     public String tocarNota() {
         return nombre + " toca la nota " + nota;
     }
+    
     public String ejecutarPiezaMusical() {
         return nombre + " está ejecutando su pieza musical";
     }
     
-    public abstract void notificarDesperfecto();
-    public abstract void arreglarDesperfecto();
+    public abstract void arreglarDesperfecto(boolean esCorregible) throws SoS_Exception;
    
 }

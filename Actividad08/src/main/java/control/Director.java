@@ -6,6 +6,7 @@
 package control;
 
 import java.util.ArrayList;
+import java.util.Random;
 import modelo.Cuerda;
 import modelo.Instrumento;
 import modelo.Percusion;
@@ -105,6 +106,18 @@ public class Director {
             Instrumento instrumento = orquesta.get(i);
             System.out.println(instrumento.ejecutarPiezaMusical());
         }
+    }
+    
+    public void arreglarInstrumentos() throws SoS_Exception {
+        Random generadorNumeros = new Random();
+        int instrumentoElegido = generadorNumeros.nextInt(orquesta.size() - 1);
+        Instrumento instrumentoReparable = orquesta.get(instrumentoElegido);
+        instrumentoReparable.setDesperfecto(true);
+        instrumentoReparable.arreglarDesperfecto(true);
+        Instrumento instrumentoIrreparable = orquesta.get(instrumentoElegido + 1);
+        instrumentoIrreparable.setDesperfecto(true);
+        instrumentoIrreparable.arreglarDesperfecto(false);
+        
     }
 
 };    
