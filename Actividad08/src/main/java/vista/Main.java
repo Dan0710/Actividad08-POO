@@ -5,10 +5,23 @@
  */
 package vista;
 
+import control.Director;
+import java.util.ArrayList;
+import modelo.Instrumento;
+
 /**
  *
  * @author Dan
  */
-public class Main {
-    
+public class main {
+    public static void main(String[] args) {
+        String partitura1 = "Moonlight Sonata";
+        Director director = new Director();
+        
+        director.crearOrquesta(80);
+        
+        director.mostrarComposicion();
+        
+       
+    }
 }

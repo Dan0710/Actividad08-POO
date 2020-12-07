@@ -12,7 +12,7 @@ package modelo;
 public class Cuerda extends Instrumento {
     
     public Cuerda() {
-        super("Cuerda", "Re");
+        super("Cuerda");
     }
 
     @Override

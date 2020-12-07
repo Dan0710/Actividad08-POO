@@ -12,7 +12,7 @@ package modelo;
 public class Percusion extends Instrumento {
     
     public Percusion() {
-        super("Percusión", "Do");
+        super("Percusión");
     }
 
     @Override

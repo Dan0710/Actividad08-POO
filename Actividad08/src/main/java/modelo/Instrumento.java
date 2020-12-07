@@ -14,6 +14,13 @@ public abstract class Instrumento {
     protected String nota;
     protected boolean desperfecto;
 
+    public Instrumento() {
+    }
+
+    public Instrumento(String nombre) {
+        this.nombre = nombre;
+    }
+    
     public Instrumento(String nombre, String nota) {
         this.nombre = nombre;
         this.nota = nota;
@@ -57,7 +64,5 @@ public abstract class Instrumento {
     
     public abstract void notificarDesperfecto();
     public abstract void arreglarDesperfecto();
-    
-    
-    
+   
 }

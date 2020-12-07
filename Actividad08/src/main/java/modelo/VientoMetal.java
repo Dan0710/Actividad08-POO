@@ -12,7 +12,7 @@ package modelo;
 public class VientoMetal extends Instrumento {
     
     public VientoMetal() {
-        super("Viento metal", "Si");
+        super("Viento metal");
     }
 
     @Override
