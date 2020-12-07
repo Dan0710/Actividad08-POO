@@ -6,9 +6,6 @@
 package vista;
 
 import control.Director;
-import java.util.ArrayList;
-import modelo.Cuerda;
-import modelo.Instrumento;
 
 /**
  *
