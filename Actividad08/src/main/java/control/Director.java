@@ -91,19 +91,19 @@ public class Director {
     public void ordenarAfinar(){
         for(int i = 0; i < orquesta.size(); i++){
             Instrumento instrumento = orquesta.get(i);
-            instrumento.afinarInstrumento();
+            System.out.println(instrumento.afinarInstrumento());
         }
     }
     public void ordenarTocarNota(){
         for(int i = 0; i < orquesta.size(); i++){
             Instrumento instrumento = orquesta.get(i);
-            instrumento.tocarNota();
+            System.out.println(instrumento.tocarNota());
         }
     }
     public void ordenarPartitura(){
         for(int i = 0; i < orquesta.size(); i++){
             Instrumento instrumento = orquesta.get(i);
-            instrumento.ejecutarPiezaMusical();
+            System.out.println(instrumento.ejecutarPiezaMusical());
         }
     }
 

@@ -7,6 +7,7 @@ package vista;
 
 import control.Director;
 import java.util.ArrayList;
+import modelo.Cuerda;
 import modelo.Instrumento;
 
 /**
@@ -17,11 +18,9 @@ public class main {
     public static void main(String[] args) {
         String partitura1 = "Moonlight Sonata";
         Director director = new Director();
-        
-        director.crearOrquesta(80);
-        
-        director.mostrarComposicion();
-        
-       
+        director.crearOrquesta(5);
+        director.ordenarAfinar();
+        director.ordenarPartitura();
+        director.ordenarTocarNota();
     }
-}
+};
