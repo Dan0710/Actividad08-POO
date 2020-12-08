@@ -12,14 +12,15 @@ import control.SoS_Exception;
  *
  * @author Dan
  */
-public class main {
+public class Main {
     public static void main(String[] args) throws SoS_Exception {
         System.out.println("Composición de la orquesta creada\n");
         Director director = new Director();
         director.crearOrquesta(85);
         director.mostrarComposicion();
-        System.out.println("\nSe crea la pieza musical \"Moonlight Sonata\" que se dividirá en diversas partituras para cada tipo de instrumento");
+        System.out.println("\nSe crea la pieza musical \"Moonlight Sonata\" que se dividirá en diversas partituras para cada tipo de instrumento\n");
         director.setPiezaMusical("Moonlight Sonata");
+        director.generarPartiturasparacadaInstrumento();
         System.out.println("\nSe solicita a todos la orquesta afinar sus instrumentos\n");
         director.ordenarAfinar();
         System.out.println("\nSe solicita a todos la orquesta tocar la nota \"do\"\n");

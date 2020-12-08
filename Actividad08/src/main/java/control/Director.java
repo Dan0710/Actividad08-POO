@@ -134,5 +134,12 @@ public class Director {
         instrumentoIrreparable.arreglarDesperfecto(false);
         
     }
-
+    public void generarPartiturasparacadaInstrumento(){
+        for(int i = 0; i < orquesta.size(); i++){
+            Instrumento instrumento = orquesta.get(i);
+            System.out.println(instrumento.adaptarPartitura(piezaMusical));
+        }
+    }
+    
+    
 };    

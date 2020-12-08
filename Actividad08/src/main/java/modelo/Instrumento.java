@@ -70,6 +70,10 @@ public abstract class Instrumento {
     public String ejecutarPiezaMusical(String nombrePieza) {
         return nombre + " está ejecutando la partitura de " + nombrePieza + ", para instrumentos de tipo " + tipoInstrumento;
     }
+    public String adaptarPartitura(String nombrePieza) {
+        return nombre + " está transformando la pieza musical: " + nombrePieza + ", para instrumentos de tipo " + tipoInstrumento;
+    }
+    
     
     public abstract void arreglarDesperfecto(boolean esCorregible) throws SoS_Exception;
    
