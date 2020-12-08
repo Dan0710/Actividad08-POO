@@ -40,25 +40,31 @@ public class Director {
         if (!orquesta.isEmpty()){
             orquesta.clear();
         }
+        int cantidadCuerda, cantidadPercusion, cantidadVientoMadera, cantidadVientoMetal;
+        cantidadCuerda = cantidadPercusion = cantidadVientoMadera = cantidadVientoMetal = 0;
         for(int i = 0; i < numeroInstrumentos ; i++){
             if(i % 4 == 0){
                 Instrumento nuevo = new Cuerda();
-                nuevo.setNombre(nuevo.getTipoInstrumento() + "-" + Integer.toString(i));
+                cantidadCuerda++;
+                nuevo.setNombre(nuevo.getTipoInstrumento() + "-" + Integer.toString(cantidadCuerda));
                 orquesta.add(nuevo);
             }
             if(i % 4 == 1){
                 Instrumento nuevo = new Percusion();
-                nuevo.setNombre(nuevo.getTipoInstrumento() + "-" + Integer.toString(i));
+                cantidadPercusion++;
+                nuevo.setNombre(nuevo.getTipoInstrumento() + "-" + Integer.toString(cantidadPercusion));
                 orquesta.add(nuevo);
             }
             if(i % 4 == 2){
                 Instrumento nuevo = new VientoMadera();
-                nuevo.setNombre(nuevo.getTipoInstrumento() + "-" + Integer.toString(i));
+                cantidadVientoMadera++;
+                nuevo.setNombre(nuevo.getTipoInstrumento() + "-" + Integer.toString(cantidadVientoMadera));
                 orquesta.add(nuevo);
             }
             if(i % 4 == 3){
                 Instrumento nuevo = new VientoMetal();
-                nuevo.setNombre(nuevo.getTipoInstrumento() + "-" + Integer.toString(i));
+                cantidadVientoMetal++;
+                nuevo.setNombre(nuevo.getTipoInstrumento() + "-" + Integer.toString(cantidadVientoMetal));
                 orquesta.add(nuevo);
             }
         }

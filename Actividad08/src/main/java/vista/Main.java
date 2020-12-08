@@ -16,7 +16,7 @@ public class main {
     public static void main(String[] args) throws SoS_Exception {
         System.out.println("Composición de la orquesta creada\n");
         Director director = new Director();
-        director.crearOrquesta(15);
+        director.crearOrquesta(85);
         director.mostrarComposicion();
         System.out.println("\nSe solicita a todos la orquesta afinar sus instrumentos\n");
         director.ordenarAfinar();
