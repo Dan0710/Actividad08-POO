@@ -29,8 +29,6 @@ public class Cuerda extends Instrumento {
         return super.tocarNota(nombreNota);
     }
 
-    
-
     @Override
     public void arreglarDesperfecto(boolean esCorregible) throws SoS_Exception {
         if (esCorregible) {
