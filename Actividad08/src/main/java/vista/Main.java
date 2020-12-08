@@ -18,13 +18,14 @@ public class main {
         Director director = new Director();
         director.crearOrquesta(85);
         director.mostrarComposicion();
+        System.out.println("\nSe crea la pieza musical \"Moonlight Sonata\" que se dividirá en diversas partituras para cada tipo de instrumento");
+        director.setPiezaMusical("Moonlight Sonata");
         System.out.println("\nSe solicita a todos la orquesta afinar sus instrumentos\n");
         director.ordenarAfinar();
         System.out.println("\nSe solicita a todos la orquesta tocar la nota \"do\"\n");
         director.ordenarTocarNota("do");
-        String partitura1 = "Moonlight Sonata";
         System.out.println("\nSe solicita a todos la orquesta tocar la pieza musical \"Moonlight Sonata\"\n");
-        director.ordenarPartitura(partitura1);
+        director.ordenarPartitura();
         System.out.println("\nPor último, se solicitan a dos instrumentos que corrijan sus errores.\n");
         director.arreglarInstrumentos();
     }

@@ -19,6 +19,7 @@ import modelo.VientoMetal;
  */
 public class Director {
     private ArrayList<Instrumento> orquesta;
+    private String piezaMusical;
 
     public Director() {
         this.orquesta = new ArrayList<Instrumento>();
@@ -34,6 +35,14 @@ public class Director {
 
     public void setOrquesta(ArrayList<Instrumento> orquesta) {
         this.orquesta = orquesta;
+    }
+
+    public String getPiezaMusical() {
+        return piezaMusical;
+    }
+
+    public void setPiezaMusical(String piezaMusical) {
+        this.piezaMusical = piezaMusical;
     }
     
     public void crearOrquesta(int numeroInstrumentos){
@@ -107,10 +116,10 @@ public class Director {
             System.out.println(instrumento.tocarNota(nota));
         }
     }
-    public void ordenarPartitura(String partitura){
+    public void ordenarPartitura(){
         for(int i = 0; i < orquesta.size(); i++){
             Instrumento instrumento = orquesta.get(i);
-            System.out.println(instrumento.ejecutarPiezaMusical(partitura));
+            System.out.println(instrumento.ejecutarPiezaMusical(piezaMusical));
         }
     }
     
