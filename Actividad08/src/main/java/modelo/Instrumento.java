@@ -13,21 +13,17 @@ import control.SoS_Exception;
  */
 public abstract class Instrumento {
     protected String nombre;
+    protected String tipoInstrumento;
     protected String nota;
     protected boolean desperfecto;
 
     public Instrumento() {
     }
 
-    public Instrumento(String nombre) {
-        this.nombre = nombre;
+    public Instrumento(String tipoInstrumento) {
+        this.tipoInstrumento = tipoInstrumento;
     }
     
-    public Instrumento(String nombre, String nota) {
-        this.nombre = nombre;
-        this.nota = nota;
-        desperfecto = false;
-    }
 
     public String getNombre() {
         return nombre;
@@ -52,17 +48,27 @@ public abstract class Instrumento {
     public void setDesperfecto(boolean desperfecto) {
         this.desperfecto = desperfecto;
     }
+
+    public String getTipoInstrumento() {
+        return tipoInstrumento;
+    }
+
+    public void setTipoInstrumento(String tipoInstrumento) {
+        this.tipoInstrumento = tipoInstrumento;
+    }
+    
+    
     
     public String afinarInstrumento() {
         return "Se afinó el instrumento " + nombre;
     }
     
-    public String tocarNota() {
-        return nombre + " toca la nota " + nota;
+    public String tocarNota(String nombreNota) {
+        return nombre + " toca la nota " + nombreNota + ", para instrumentos de tipo " + tipoInstrumento;
     }
     
-    public String ejecutarPiezaMusical() {
-        return nombre + " está ejecutando su pieza musical";
+    public String ejecutarPiezaMusical(String nombrePieza) {
+        return nombre + " está ejecutando la pieza musical " + nombrePieza + ", para instrumentos de tipo " + tipoInstrumento;
     }
     
     public abstract void arreglarDesperfecto(boolean esCorregible) throws SoS_Exception;

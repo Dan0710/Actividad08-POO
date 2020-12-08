@@ -18,11 +18,23 @@ public class Cuerda extends Instrumento {
         super("Cuerda");
     }
 
+    @Override
+    public String ejecutarPiezaMusical(String nombrePieza) {
+        return super.ejecutarPiezaMusical(nombrePieza);
+    }
+    
+
+    @Override
+    public String tocarNota(String nombreNota) {
+        return super.tocarNota(nombreNota);
+    }
+
+    
 
     @Override
     public void arreglarDesperfecto(boolean esCorregible) throws SoS_Exception {
         if (esCorregible) {
-            System.out.println("El instrumento " + this.getNombre() + " ha sido arreglado correctamente");
+            System.out.println("El instrumento " + super.tipoInstrumento + " ha sido arreglado correctamente");
         }
         else {
             throw new SoS_Exception(Instrumento_Cuerda);
