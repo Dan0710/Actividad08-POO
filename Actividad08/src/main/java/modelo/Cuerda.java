@@ -5,6 +5,9 @@
  */
 package modelo;
 
+import control.SoS_Exception;
+import static control.SoS_Exception.TInstrumento.Instrumento_Cuerda;
+
 /**
  *
  * @author elias
@@ -16,12 +19,25 @@ public class Cuerda extends Instrumento {
     }
 
     @Override
-    public void notificarDesperfecto() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String ejecutarPiezaMusical(String nombrePieza) {
+        return super.ejecutarPiezaMusical(nombrePieza);
     }
+    
 
     @Override
-    public void arreglarDesperfecto() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String tocarNota(String nombreNota) {
+        return super.tocarNota(nombreNota);
+    }
+
+    
+
+    @Override
+    public void arreglarDesperfecto(boolean esCorregible) throws SoS_Exception {
+        if (esCorregible) {
+            System.out.println("El instrumento " + super.tipoInstrumento + " ha sido arreglado correctamente");
+        }
+        else {
+            throw new SoS_Exception(Instrumento_Cuerda);
+        }
     }
 }
