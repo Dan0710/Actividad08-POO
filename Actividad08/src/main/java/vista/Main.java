@@ -12,7 +12,7 @@ import control.SoS_Exception;
  *
  * @author Dan
  */
-public class Main {
+public class main {
     public static void main(String[] args) throws SoS_Exception {
         System.out.println("Composición de la orquesta creada\n");
         Director director = new Director();

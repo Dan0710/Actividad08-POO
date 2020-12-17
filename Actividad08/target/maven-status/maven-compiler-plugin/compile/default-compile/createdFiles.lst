@@ -5,6 +5,6 @@ control\SoS_Exception.class
 modelo\VientoMadera.class
 control\SoS_Exception$1.class
 control\Director.class
+vista\main.class
 modelo\VientoMetal.class
 modelo\Cuerda.class
-vista\Main.class

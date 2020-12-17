@@ -20,6 +20,10 @@ public abstract class Instrumento {
     public Instrumento() {
     }
 
+    /**
+     * Constructor de clase abstracta Instrumento
+     * @param tipoInstrumento
+     */
     public Instrumento(String tipoInstrumento) {
         this.tipoInstrumento = tipoInstrumento;
     }
